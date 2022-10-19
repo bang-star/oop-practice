@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a340ddcb-1db5-4f98-ad12-f57e32eeab71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PasswordGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PasswordValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RandomPasswordGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CorrectFixedPasswordGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PasswordValidatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/WrongFixedPasswordGenerator.java" afterDir="false" />
-    </list>
+    <list default="true" id="a340ddcb-1db5-4f98-ad12-f57e32eeab71" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +63,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest.passwordTest">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration name="PasswordValidatorTest.validatePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop-practice.test" />
       <extension name="coverage">
@@ -134,6 +112,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-practice.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop-practice.test" />
       <extension name="coverage">
@@ -152,6 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.UserTest.passwordTest" />
         <item itemvalue="JUnit.PasswordValidatorTest.validatePasswordTest2 (1)" />
         <item itemvalue="JUnit.PasswordValidatorTest.validatePasswordTest2" />
@@ -167,12 +161,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666203550817</updated>
-      <workItem from="1666203554022" duration="5837000" />
+      <workItem from="1666203554022" duration="6214000" />
     </task>
+    <task id="LOCAL-00001" summary="Initialization">
+      <created>1666209626242</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209626242</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Base - Password Validator">
+      <created>1666209686008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209686008</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1. DI를 통해 강한 결합도 -&gt; 낮은 결합도&#10;2. 인터페이스를 통해 쉬운 테스트 코드로 변환&#10;3. @FunctionalInterface를 통해 직접적인 메소드 호출이 아닌 람다형식으로 사용가능해짐.">
+      <created>1666209816861</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209816861</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialization" />
+    <MESSAGE value="Base - Password Validator" />
+    <MESSAGE value="1. DI를 통해 강한 결합도 -&gt; 낮은 결합도&#10;2. 인터페이스를 통해 쉬운 테스트 코드로 변환&#10;3. @FunctionalInterface를 통해 직접적인 메소드 호출이 아닌 람다형식으로 사용가능해짐." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. DI를 통해 강한 결합도 -&gt; 낮은 결합도&#10;2. 인터페이스를 통해 쉬운 테스트 코드로 변환&#10;3. @FunctionalInterface를 통해 직접적인 메소드 호출이 아닌 람다형식으로 사용가능해짐." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
