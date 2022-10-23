@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a340ddcb-1db5-4f98-ad12-f57e32eeab71" name="Changes" comment="" />
+    <list default="true" id="a340ddcb-1db5-4f98-ad12-f57e32eeab71" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WrongFixedPasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/WrongFixedPasswordGenerator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,10 +47,10 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,7 +67,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="JUnit.UserTest.passwordTest">
     <configuration name="PasswordValidatorTest.validatePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oop-practice.test" />
       <extension name="coverage">
@@ -145,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.UserTest.passwordTest" />
         <item itemvalue="JUnit.PasswordValidatorTest.validatePasswordTest2 (1)" />
+        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.PasswordValidatorTest.validatePasswordTest2" />
         <item itemvalue="JUnit.PasswordValidatorTest.validatePasswordTest" />
       </list>
@@ -161,7 +165,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666203550817</updated>
-      <workItem from="1666203554022" duration="6214000" />
+      <workItem from="1666203554022" duration="6378000" />
+      <workItem from="1666245872421" duration="488000" />
+      <workItem from="1666527878778" duration="2266000" />
+      <workItem from="1666530336943" duration="723000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization">
       <created>1666209626242</created>
@@ -184,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666209816861</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. DI를 통해 강한 결합도 -&gt; 낮은 결합도&#10;2. 인터페이스를 통해 쉬운 테스트 코드로 변환&#10;3. @FunctionalInterface를 통해 직접적인 메소드 호출이 아닌 람다형식으로 사용가능해짐.">
+      <created>1666209837260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209837260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
