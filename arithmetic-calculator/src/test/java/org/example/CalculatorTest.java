@@ -12,6 +12,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.stream.Stream;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalculatorTest {
@@ -20,14 +22,17 @@ public class CalculatorTest {
     @DisplayName("간단한 사칙연산을 할 수 있다.")
     @ParameterizedTest
     @MethodSource("formulaAndResult")
-    void additionTest() {
-        int result = Calculator.calculate(1, "+", 2);
-        assertThat(result).isEqualTo(3);
+    void additionTest(int operand1, String operator, int operand2, int result) {
+        int calculateResult = Calculator.calculate(operand1, operator, operand2);
+        assertThat(result).isEqualTo(calculateResult);
     }
 
-    private Stream<Arguments> formulaAndResult(){
+    private static Stream<Arguments> formulaAndResult(){
         return Stream.of(
-                arguments
-        )
+                Arguments.arguments(1, "+", 2, 3),
+                Arguments.arguments(2, "-", 3, -1),
+                Arguments.arguments(2, "*", 3, 6),
+                Arguments.arguments(4, "/", 2, 2)
+        );
     }
 }
