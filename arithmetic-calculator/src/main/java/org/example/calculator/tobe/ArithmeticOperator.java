@@ -1,6 +1,8 @@
-package org.example.calculate;
+package org.example.calculator.tobe;
 
-public interface NewArithmeticOperator {
+import org.example.calculator.domain.PositiveNumber;
+
+public interface ArithmeticOperator {
 
     // 1. 해당 연산자에 대한 서비스를 지원하는지
     boolean supports(String operator);

@@ -1,4 +1,4 @@
-package org.example.calculate;
+package org.example.calculator.domain;
 
 public class PositiveNumber {
     private final int value;

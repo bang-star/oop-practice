@@ -1,13 +1,13 @@
-package org.example;
+package org.example.calculator.domain;
 
-import org.example.calculate.*;
+import org.example.calculator.tobe.*;
 
 import java.util.List;
 
 public class Calculator {
 
     // 인터페이스의 구현체들을 상위 인터페이스 타입에 리스트를 통해 저장시킨다.
-    private static final List<NewArithmeticOperator> arithmeticOperators = List.of(new AdditionOperator(), new SubtractionOperator(), new MultiplicationOperator(), new DivisionOperator());
+    private static final List<ArithmeticOperator> arithmeticOperators = List.of(new AdditionOperator(), new SubtractionOperator(), new MultiplicationOperator(), new DivisionOperator());
 
     public static int calculate(PositiveNumber operand1, String operator, PositiveNumber operand2) {
         return arithmeticOperators.stream()

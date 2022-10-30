@@ -7,9 +7,9 @@ package org.example;
 * MVC 패턴(Model-View-Controller) 기반으로 구현한다.
 * */
 
-import org.example.calculate.PositiveNumber;
+import org.example.calculator.domain.PositiveNumber;
+import org.example.calculator.domain.Calculator;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,7 +17,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
 
 public class CalculatorTest {
 
