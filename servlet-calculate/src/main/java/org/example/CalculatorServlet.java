@@ -11,19 +11,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/calculate")
-public class CalculatorServlet implements Servlet {
+public class CalculatorServlet extends GenericServlet {
 
     private static final Logger log = LoggerFactory.getLogger(CalculatorServlet.class);
-
-    private ServletConfig servletConfig;
-
-    // Life Cycle과 관련된 메소드
-    @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
-        log.info("init");
-
-        this.servletConfig = servletConfig;
-    }
 
     @Override
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
@@ -41,25 +31,5 @@ public class CalculatorServlet implements Servlet {
         PrintWriter writer = response.getWriter();
         writer.println(result);
     }
-
-    @Override
-    public void destroy() {
-        // resource release
-    }
-
-    // Life Cycle과 관련 없는 메소드
-
-    @Override
-    public ServletConfig getServletConfig() {
-        // 해당 인스턴스를 리턴할 때 사용
-        return this.servletConfig;
-    }
-
-
-    @Override
-    public String getServletInfo() {
-        return null;
-    }
-
 
 }
