@@ -15,10 +15,14 @@ public class CalculatorServlet implements Servlet {
 
     private static final Logger log = LoggerFactory.getLogger(CalculatorServlet.class);
 
+    private ServletConfig servletConfig;
+
     // Life Cycle과 관련된 메소드
     @Override
-    public void init(ServletConfig config) throws ServletException {
+    public void init(ServletConfig servletConfig) throws ServletException {
         log.info("init");
+
+        this.servletConfig = servletConfig;
     }
 
     @Override
@@ -40,14 +44,15 @@ public class CalculatorServlet implements Servlet {
 
     @Override
     public void destroy() {
-
+        // resource release
     }
 
     // Life Cycle과 관련 없는 메소드
 
     @Override
     public ServletConfig getServletConfig() {
-        return null;
+        // 해당 인스턴스를 리턴할 때 사용
+        return this.servletConfig;
     }
 
 
