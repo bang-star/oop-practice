@@ -77,7 +77,7 @@ public class UserDao {
 //        }
 //    }
 
-    // TO-BE : 변경되는 부분은 API 호출자 입장에서 변경하도록 하면 된다.
+    // TO-BE : 변경되는 부분은 API 호출자 입장에서 전달하면 된다.
     public User findByUserId(String userId) throws SQLException {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         String sql = "SELECT userId, password, name, email FROM USERS WHERE userid = ?";

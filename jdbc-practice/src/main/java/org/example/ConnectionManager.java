@@ -25,7 +25,7 @@ public class ConnectionManager {
         hikariDataSource.setUsername(DB_USERNAME);
         hikariDataSource.setPassword(DB_PASSWORD);
 
-        // 커넥션 풀의 최소와 최대 개수 설정
+        // 커넥션 풀의 최대 개수 설정
         hikariDataSource.setMaximumPoolSize(MAX_POOL_SIZE);
         hikariDataSource.setMinimumIdle(MAX_POOL_SIZE);
 
@@ -36,14 +36,14 @@ public class ConnectionManager {
     // 커넥션 Pool 적용
     public static Connection getConnection() {
         try {
+            // DataSource로부터 Connection을 받아온다.
             return ds.getConnection();
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
     }
 
-    public static DataSource getDataSource(){
+    public static DataSource getDataSource() {
         return ds;
     }
-
 }
