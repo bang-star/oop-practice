@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // HikariCP
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    // spring-jdbc
+    implementation 'org.springframework:spring-jdbc:5.3.22'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // 테스트 가독성을 위한 assertJ
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+    // 인메모리 DB인 H2database
+    testImplementation 'com.h2database:h2:2.1.214'
+}
+
+test {
+    useJUnitPlatform()
+}
