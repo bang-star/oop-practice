@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 @WebServlet("/")
@@ -24,7 +23,7 @@ public class DispatcherServlet extends HttpServlet {
 
     private static final Logger log = LoggerFactory.getLogger(DispatcherServlet.class);
 
-    private RequestMappingHandlerMapping rmhm;
+    private HandlerMapping handlerMapping;          // 구체적인 클래스 타입이 아닌 인터페이스 타입으로 선언
 
     private List<HandlerAdapter> handlerAdapters;
 
@@ -32,8 +31,10 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        rmhm = new RequestMappingHandlerMapping();
+        RequestMappingHandlerMapping rmhm = new RequestMappingHandlerMapping();
         rmhm.init();
+
+        handlerMapping = rmhm;
 
         handlerAdapters = List.of(new SimpleControllerHandlaerAdapter());
         viewResolvers = Collections.singletonList(new JSPViewResolver());
@@ -46,7 +47,7 @@ public class DispatcherServlet extends HttpServlet {
 
         try {
             // Handler Mapping
-            Controller handler = rmhm.findHanlder(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));     // 1. 요청된 경로를 통해 적절한 컨트롤러 반환
+            Object handler = handlerMapping.findHanlder(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));     // 1. 요청된 경로를 통해 적절한 컨트롤러 반환
 
             // String viewName = handler.handleRequest(request, response);         // 2. Handler에게 작업을 위임하고 해당 viewName을 받는다.
 

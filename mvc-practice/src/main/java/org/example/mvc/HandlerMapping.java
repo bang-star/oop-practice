@@ -1,2 +1,5 @@
-package org.example.mvc;public class HandlerMapping {
+package org.example.mvc;
+
+public interface HandlerMapping {
+    Object findHanlder(HandlerKey handlerKey);
 }
