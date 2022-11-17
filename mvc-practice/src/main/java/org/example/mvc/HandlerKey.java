@@ -5,13 +5,12 @@ import org.example.mvc.controller.RequestMethod;
 import java.util.Objects;
 
 public class HandlerKey {
+    private String url;
+    private RequestMethod requestMethod;
 
-    private final RequestMethod method;
-    private final String uriPath;
-
-    public HandlerKey(RequestMethod method, String uriPath) {
-        this.method = method;
-        this.uriPath = uriPath;
+    public HandlerKey(String url, RequestMethod requestMethod) {
+        this.url = url;
+        this.requestMethod = requestMethod;
     }
 
     @Override
@@ -19,11 +18,19 @@ public class HandlerKey {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HandlerKey that = (HandlerKey) o;
-        return method == that.method && Objects.equals(uriPath, that.uriPath);
+        return Objects.equals(url, that.url) && requestMethod == that.requestMethod;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(method, uriPath);
+        return Objects.hash(url, requestMethod);
+    }
+
+    @Override
+    public String toString() {
+        return "HandlerKey{" +
+                "url='" + url + '\'' +
+                ", requestMethod=" + requestMethod +
+                '}';
     }
 }

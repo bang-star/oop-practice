@@ -4,14 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ForwardController implements Controller{
-    private String forwardUriPath;
+    private String forwardUrl;
 
-    public ForwardController(String forwardUriPath) {
-        this.forwardUriPath = forwardUriPath;
+    public ForwardController(String forwardUrl) {
+        this.forwardUrl = forwardUrl;
     }
 
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        return forwardUriPath;
+        return forwardUrl;
     }
 }

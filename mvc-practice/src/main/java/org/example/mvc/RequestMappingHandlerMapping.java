@@ -1,25 +1,28 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RequestMappingHandlerMapping implements HandlerMapping {
-
-    // [Key] URL Path, [Value] Controller
+    private static final Logger logger = LoggerFactory.getLogger(DispatcherServlet.class);
     private Map<HandlerKey, Controller> mappings = new HashMap<>();
 
-    // 인덱스 페이지에 대한 설정
-    void init(){
-//        mappings.put(new HandlerKey(RequestMethod.GET, "/"), new HomeController());
-        mappings.put(new HandlerKey(RequestMethod.GET, "/users"), new UserListController());
-        mappings.put(new HandlerKey(RequestMethod.POST, "/users"), new UserCreateController());
-        mappings.put(new HandlerKey(RequestMethod.GET, "/user/form"), new ForwardController("/user/form"));
+    void init() {
+//        mappings.put(new HandlerKey("/", RequestMethod.GET), new HomeController());
+        mappings.put(new HandlerKey("/user/form", RequestMethod.GET), new ForwardController("/user/form"));
+        mappings.put(new HandlerKey("/users", RequestMethod.GET), new UserListController());
+        mappings.put(new HandlerKey("/users", RequestMethod.POST), new UserCreateController());
+
+        mappings.keySet().forEach(path ->
+                logger.info("url path: [{}], controller: [{}]", path, mappings.get(path).getClass()));
     }
 
-    // URI 경로에 따른 컨트롤러 호출 메소드
-    public Controller findHanlder(HandlerKey handlerKey){
+    @Override
+    public Controller findHandler(HandlerKey handlerKey) {
         return mappings.get(handlerKey);
     }
 }

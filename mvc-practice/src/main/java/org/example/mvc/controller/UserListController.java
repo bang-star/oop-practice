@@ -8,10 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserListController implements Controller {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        // Users 정보 전달
-
         request.setAttribute("users", UserRepository.findAll());
-
         return "/user/list";
     }
 }

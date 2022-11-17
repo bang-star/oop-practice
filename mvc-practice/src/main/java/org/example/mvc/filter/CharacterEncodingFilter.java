@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 // 한글 깨짐 방지를 위한 Filter
-@WebFilter("/")
+@WebFilter("/*")
 public class CharacterEncodingFilter implements Filter {
 
     private static final String DEFAULT_ENCODING = "UTF-8";

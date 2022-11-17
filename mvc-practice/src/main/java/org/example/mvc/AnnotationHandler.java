@@ -10,14 +10,15 @@ public class AnnotationHandler {
     private final Method targetMethod;
 
     public AnnotationHandler(Class<?> clazz, Method targetMethod) {
-        this.clazz= clazz;
+        this.clazz = clazz;
         this.targetMethod = targetMethod;
     }
 
-    public String handle(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        Constructor<?> declaredConstructor = clazz.getDeclaredConstructor();
-        Object handler = declaredConstructor.newInstance();
+    public String handle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        Constructor<?> defaultConstructor = clazz.getDeclaredConstructor();
+        Object targetObject = defaultConstructor.newInstance();
 
-        return (String) targetMethod.invoke(handler, request, response);
+        return (String) targetMethod.invoke(targetObject, request, response);
     }
 }
+
