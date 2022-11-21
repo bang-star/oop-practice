@@ -56,6 +56,16 @@ public class BeanFactory {
         return clazz.getConstructors()[0];
     }
 
+    private Object getParameterByClass(Class<?> typeClass) {
+        Object instanceBean = getBean(typeClass);
+
+        if(Objects.nonNull(instanceBean)){
+            return instanceBean;
+        }
+
+        return createInstance(typeClass);
+    }
+
 
     // 어떤 타입의 파라미터가 인자로 들어올지 알수 없기 때문에 제네릭 타입으로 선언
     public <T> T getBean(Class<T> requiredType) {
